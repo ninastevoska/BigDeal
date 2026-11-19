@@ -1,0 +1,75 @@
+/* BigDeal – skupni oblikovni sistem */
+
+:root {
+  /* Barve */
+  --color-primary: #424D2C;
+  --color-primary-pressed: #323B21;
+
+  --color-accent: #DDF36B;
+  --color-accent-soft: #F0F8CA;
+
+  --color-background: #F8F8F4;
+  --color-surface: #FFFFFF;
+  --color-surface-secondary: #F0F1EA;
+
+  --color-text: #20251B;
+  --color-text-secondary: #73786D;
+  --color-text-inverse: #FFFFFF;
+
+  --color-border: #E5E7DE;
+  --color-disabled: #B9BDB1;
+
+  --color-discount: #D95C3B;
+  --color-success: #287A50;
+  --color-error: #C43D3D;
+  --color-warning: #B87819;
+
+  /* Razmiki */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+  --spacing-xxl: 32px;
+  --spacing-xxxl: 48px;
+
+  /* Zaobljenost */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-xxl: 24px;
+  --radius-full: 9999px;
+
+  /* Tipografija */
+  --font-family: Inter, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Arial, sans-serif;
+
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 22px;
+  --font-size-xxl: 28px;
+  --font-size-xxxl: 32px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Sence */
+  --shadow-card: 0 4px 18px rgba(32, 37, 27, 0.06);
+  --shadow-floating: 0 8px 30px rgba(32, 37, 27, 0.12);
+
+  /* Postavitev */
+  --mobile-width: 390px;
+  --mobile-height: 844px;
+  --screen-padding: 20px;
+  --bottom-nav-height: 72px;
+
+  /* Animacije */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+}
