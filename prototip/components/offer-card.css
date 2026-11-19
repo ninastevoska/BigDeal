@@ -1,0 +1,193 @@
+/* BigDeal – skupne kartice ponudb */
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-md);
+}
+
+.offer-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  color: var(--color-text);
+  text-decoration: none;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.offer-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-floating);
+}
+
+.offer-card:active {
+  transform: scale(0.99);
+}
+
+/* Fotografija ponudbe */
+
+.offer-card-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--color-surface-secondary);
+}
+
+.offer-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Oznake na fotografiji */
+
+.offer-card-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 9px;
+  color: var(--color-text);
+  background: var(--color-accent);
+  border-radius: var(--radius-full);
+  font-size: 10px;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+}
+
+.offer-card-badge--promotion {
+  background: var(--color-surface);
+  color: var(--color-primary);
+}
+
+/* Vsebina kartice */
+
+.offer-card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 5px;
+  padding: var(--spacing-md);
+}
+
+.offer-card-title {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.4;
+}
+
+.offer-card-business {
+  overflow: hidden;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Cene in popusti */
+
+.offer-card-prices {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-top: auto;
+  padding-top: var(--spacing-xs);
+}
+
+.offer-card-price {
+  color: var(--color-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.3;
+}
+
+.offer-card-original-price {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  text-decoration: line-through;
+}
+
+.offer-card-discount {
+  width: fit-content;
+  color: var(--color-discount);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Dodatni podatki */
+
+.offer-card-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+}
+
+.offer-card-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--color-success);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.offer-card-status::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: currentColor;
+  border-radius: 50%;
+}
+
+/* Širša kartica – za večje sezname */
+
+.offer-card--horizontal {
+  flex-direction: row;
+}
+
+.offer-card--horizontal .offer-card-image {
+  width: 120px;
+  min-width: 120px;
+  aspect-ratio: auto;
+}
+
+.offer-card--horizontal .offer-card-content {
+  min-width: 0;
+}
+
+/* Manjši zasloni */
+
+@media (max-width: 360px) {
+  .offer-grid {
+    gap: var(--spacing-sm);
+  }
+
+  .offer-card-content {
+    padding: var(--spacing-sm);
+  }
+
+  .offer-card-price {
+    font-size: var(--font-size-md);
+  }
+}
