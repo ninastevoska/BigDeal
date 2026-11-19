@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pregled – BigDeal ponudnik</title>
+
+  <link rel="stylesheet" href="../../../css/variables.css">
+  <link rel="stylesheet" href="../../../css/global.css">
+  <link rel="stylesheet" href="../../../components/header.css">
+  <link rel="stylesheet" href="../../../components/logo.css">
+  <link rel="stylesheet" href="../../../components/bottom-nav.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="app-shell">
+    <div class="phone-frame">
+
+      <header class="app-header">
+        <div class="header-brand">
+          <div data-bigdeal-brand="small" data-tagline="false"></div>
+          <span class="header-location">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 10h18l-2-7H5z"/><path d="M5 10v11h14V10"/><path d="M9 21v-7h6v7"/>
+            </svg>
+            <span>Ponudnikov način</span>
+          </span>
+        </div>
+
+        <div class="header-actions">
+          <button
+            type="button"
+            class="header-icon-button header-notification"
+            id="notificationsButton"
+            aria-label="Obvestila"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
+            </svg>
+            <span class="header-notification-dot"></span>
+          </button>
+
+          <button
+            type="button"
+            class="header-icon-button"
+            data-switch-mode="buyer"
+            aria-label="Preklopi na kupca"
+            title="Preklopi na kupca"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <main class="page-content">
+
+        <!-- Izbira aktivnega podjetja -->
+        <section class="section business-switch" aria-label="Aktivno podjetje">
+          <div class="business-switch-card">
+            <span class="icon-tile icon-tile--accent" id="businessIcon"></span>
+
+            <div class="business-switch-text">
+              <span class="text-caption">Aktivno podjetje</span>
+              <span class="business-switch-name" id="businessName"></span>
+              <span class="business-switch-type" id="businessType"></span>
+            </div>
+
+            <span class="business-switch-chevron" id="businessChevron" aria-hidden="true"></span>
+
+            <label class="visually-hidden" for="businessSelect">Izberi aktivno podjetje</label>
+            <select class="business-switch-select" id="businessSelect"></select>
+          </div>
+        </section>
+
+        <!-- Pozdrav in hitra dejanja -->
+        <section class="section hero-card">
+          <h1 class="hero-title" id="heroTitle"></h1>
+          <p class="hero-text" id="heroText"></p>
+
+          <div class="hero-actions">
+            <a class="btn btn-accent" href="../create-offer/index.html" id="newOfferLink">
+              <span class="btn-icon" id="newOfferIcon"></span>
+              Nova ponudba
+            </a>
+            <a class="btn hero-btn-outline" href="../pickups/index.html?scan=1" id="scanLink">
+              <span class="btn-icon" id="scanIcon"></span>
+              Skeniraj QR
+            </a>
+          </div>
+        </section>
+
+        <!-- Ključni podatki -->
+        <section class="section" aria-labelledby="statsTitle">
+          <h2 class="visually-hidden" id="statsTitle">Ključni podatki</h2>
+          <div class="stat-grid" id="statGrid"></div>
+        </section>
+
+        <!-- Današnji prevzemi -->
+        <section class="section" aria-labelledby="todayTitle">
+          <div class="section-heading">
+            <h2 class="section-title" id="todayTitle">Današnji prevzemi</h2>
+            <a class="section-link" href="../pickups/index.html" id="allPickupsLink">Vsi</a>
+          </div>
+
+          <div class="stack" id="todayPickups"></div>
+        </section>
+
+        <!-- Stanje ponudb -->
+        <section class="section" aria-labelledby="offersTitle">
+          <div class="section-heading">
+            <h2 class="section-title" id="offersTitle">Moje ponudbe</h2>
+            <a class="section-link" href="../offers/index.html" id="allOffersLink">Vse</a>
+          </div>
+
+          <div class="card offer-stock-list" id="offerStockList"></div>
+        </section>
+
+      </main>
+
+      <nav data-bottom-nav data-mode="provider" data-active="dashboard"></nav>
+    </div>
+  </div>
+
+  <script src="../../../js/mock-data.js"></script>
+  <script src="../../../js/navigation.js"></script>
+  <script src="../../../js/brand.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

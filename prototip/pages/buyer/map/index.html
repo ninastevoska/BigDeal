@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="sl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BigDeal – Zemljevid ponudb</title>
+
+    <!-- Skupni oblikovni sistem -->
+    <link rel="stylesheet" href="../../../css/variables.css">
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../components/header.css">
+    <link rel="stylesheet" href="../../../components/bottom-nav.css">
+    <link rel="stylesheet" href="../../../components/logo.css">
+
+    <!-- Leaflet zemljevid -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <div class="phone-frame">
+
+
+            <header class="app-header map-header">
+                <!-- Skupni BigDeal logotip -->
+                <div data-bigdeal-brand="small"></div>
+
+                <!-- Trenutno izbrano mesto -->
+                <div class="map-city">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" />
+                        <circle cx="12" cy="10" r="2.5" />
+                    </svg>
+                    <span>Maribor</span>
+                </div>
+            </header>
+
+
+            <main class="page-content map-page">
+
+                <div class="map-filters" role="group" aria-label="Vrsta ponudbe">
+                    <button class="map-filter active" data-filter="ALL" aria-pressed="true">
+                        Vse
+                    </button>
+
+                    <button class="map-filter" data-filter="RESERVABLE" aria-pressed="false">
+                        Rezervacije
+                    </button>
+
+                    <button class="map-filter" data-filter="PROMOTION" aria-pressed="false">
+                        Promocije
+                    </button>
+                </div>
+
+                <div class="map-container">
+                    <div id="offers-map" role="region" aria-label="Zemljevid ponudnikov v Mariboru">
+                    </div>
+
+                    <div class="map-overlay">
+                        <span id="map-count">Nalaganje ponudb ...</span>
+                    </div>
+                </div>
+
+                <div class="map-legend" aria-label="Legenda ponudb">
+                    <div class="map-legend-item">
+                        <span class="map-legend-dot map-legend-dot--reservable"></span>
+                        <span>Rezervacije</span>
+                    </div>
+
+                    <div class="map-legend-item">
+                        <span class="map-legend-dot map-legend-dot--promotion"></span>
+                        <span>Promocije</span>
+                    </div>
+                </div>
+
+                <section class="map-results">
+                    <div class="map-section-heading">
+                        <h2>Ponudbe na zemljevidu</h2>
+                        <span id="results-count"></span>
+                    </div>
+
+                    <div id="map-offers-list" class="map-offers-list"></div>
+
+                    <p id="map-message" class="map-message" role="status"></p>
+                </section>
+
+            </main>
+
+            <nav data-bottom-nav data-mode="buyer" data-active="map"></nav>
+
+        </div>
+    </div>
+
+    <!-- Skupni podatki in navigacija -->
+    <script src="../../../js/mock-data.js"></script>
+    <script src="../../../js/navigation.js"></script>
+
+    <!-- Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Logika zemljevida -->
+    <script src="./script.js"></script>
+
+    <!-- Brand Script -->
+    <script src="../../../js/brand.js"></script>
+</body>
+
+</html>

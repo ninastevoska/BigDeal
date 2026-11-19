@@ -1,0 +1,59 @@
+/* BigDeal – skupni logotip */
+
+.bigdeal-brand {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.bigdeal-logo {
+  display: inline-flex;
+  align-items: baseline;
+  white-space: nowrap;
+  line-height: 0.95;
+}
+
+.bigdeal-logo-big {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 42px;
+  letter-spacing: -1.4px;
+  color: #151515;
+  margin-right: 2px;
+}
+
+.bigdeal-logo-deal {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  color: #151515;
+}
+
+.bigdeal-logo-dot {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: #DDF36B;
+}
+
+.bigdeal-tagline {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* Manjša različica */
+
+.bigdeal-brand--small .bigdeal-logo-big {
+  font-size: 30px;
+}
+
+.bigdeal-brand--small .bigdeal-logo-deal,
+.bigdeal-brand--small .bigdeal-logo-dot {
+  font-size: 29px;
+}
