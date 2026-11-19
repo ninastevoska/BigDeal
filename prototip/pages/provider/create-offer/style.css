@@ -1,0 +1,81 @@
+
+/* Izbira vrste ponudbe */
+
+.type-option {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    cursor: pointer;
+    font-size: var(--font-size-sm);
+}
+
+.type-option input {
+    accent-color: var(--color-primary);
+    width: 18px;
+    height: 18px;
+}
+
+.type-option:has(input:checked) {
+    background: var(--color-accent-soft);
+    border-color: var(--color-primary);
+}
+
+/* Termini prevzema */
+
+.pickup-slot {
+    padding: var(--spacing-lg);
+}
+
+.remove-slot {
+    color: var(--color-error);
+}
+
+/* Samodejno izračunan popust */
+
+#discount[readonly] {
+    background: var(--color-surface-secondary);
+    color: var(--color-primary);
+}
+
+/* Sporočila */
+
+#form-error {
+    margin: var(--spacing-md) 0;
+}
+
+#success-message {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    background: var(--color-accent-soft);
+    color: var(--color-success);
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+/* Predogled */
+
+#preview {
+    margin-top: var(--spacing-xl);
+}
+
+.preview-card {
+    padding: var(--spacing-lg);
+}
+
+#preview-image {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+}
+
+#preview-details {
+    white-space: pre-line;
+}
+
+/* Prikrivanje elementov */
+
+[hidden] {
+    display: none !important;
+}

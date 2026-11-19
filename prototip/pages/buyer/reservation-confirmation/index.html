@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Potrditev rezervacije | BigDeal</title>
+
+    <link rel="stylesheet" href="../../../css/variables.css">
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../components/header.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-shell">
+        <div class="phone-frame">
+
+            <header class="app-header app-header--compact">
+
+                <a href="../home/index.html"
+                   class="header-icon-button header-back"
+                   aria-label="Nazaj na ponudbe">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M19 12H5"></path>
+                        <path d="M12 19l-7-7 7-7"></path>
+                    </svg>
+
+                </a>
+
+                <h1 class="header-title">Potrditev rezervacije</h1>
+
+            </header>
+
+            <main class="page-content">
+
+                <!-- Sporočilo ob napaki -->
+
+                <section id="error-message"
+                         class="section stack"
+                         hidden>
+
+                    <h2 class="section-title">
+                        Rezervacija ni najdena
+                    </h2>
+
+                    <p class="text-secondary">
+                        Izbrana rezervacija ne obstaja.
+                    </p>
+
+                    <a href="../home/index.html"
+                       class="btn btn-primary btn-full">
+                        Nazaj na ponudbe
+                    </a>
+
+                </section>
+
+                <!-- Podatki o rezervaciji -->
+
+                <div id="confirmation-content" hidden>
+
+                    <section class="section confirmation-header">
+
+                        <div class="success-icon">✓</div>
+
+                        <h2 id="confirmation-title" class="page-title">
+                            Rezervacija uspešna!
+                        </h2>
+
+                        <p id="reservation-number"
+                           class="text-secondary"></p>
+
+                        <span id="reservation-status"
+                              class="badge badge-success"></span>
+
+                    </section>
+
+                    <!-- Povzetek rezervacije -->
+
+                    <section class="section stack">
+
+                        <h2 class="section-title">
+                            Podrobnosti rezervacije
+                        </h2>
+
+                        <div class="card confirmation-card stack">
+
+                            <h3 id="offer-title"
+                                class="card-title"></h3>
+
+                            <div class="summary-row">
+                                <span>Količina</span>
+                                <span id="quantity"></span>
+                            </div>
+
+                            <div class="summary-row">
+                                <span>Datum prevzema</span>
+                                <span id="pickup-date"></span>
+                            </div>
+
+                            <div class="summary-row">
+                                <span>Termin prevzema</span>
+                                <span id="pickup-slot"></span>
+                            </div>
+
+                            <div class="summary-row">
+                                <span>Ponudnik</span>
+                                <span id="business-name"></span>
+                            </div>
+
+                            <div class="summary-row">
+                                <span>Lokacija</span>
+                                <span id="business-address"></span>
+                            </div>
+
+                            <div class="summary-row total-row">
+                                <strong>Skupaj za plačilo</strong>
+                                <strong id="total-price"></strong>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <!-- QR-koda za prevzem -->
+
+                    <section id="pickup-code-section"
+                             class="section stack">
+
+                        <div class="card qr-card stack">
+
+                            <h2 class="section-title">
+                                Tvoja koda za prevzem
+                            </h2>
+
+                            <div id="qrcode"></div>
+
+                            <p id="qr-token"></p>
+
+                            <p id="qr-error"
+                               class="form-error"
+                               hidden>
+                                QR-kode ni mogoče prikazati.
+                                Uporabi izpisano kodo za prevzem.
+                            </p>
+
+                            <p class="text-secondary text-small">
+                                Ob prevzemu izdelka pokaži
+                                QR-kodo ponudniku.
+                            </p>
+
+                        </div>
+
+                    </section>
+
+                    <section class="section stack">
+
+                        <a href="../home/index.html"
+                           class="btn btn-primary btn-full">
+                            Nazaj na ponudbe
+                        </a>
+
+                    </section>
+
+                </div>
+
+            </main>
+
+        </div>
+    </div>
+
+    <script src="../../../js/mock-data.js"></script>
+    <script src="../../../js/reservation-storage.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

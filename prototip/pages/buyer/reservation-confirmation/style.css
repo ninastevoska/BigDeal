@@ -1,0 +1,98 @@
+
+/* Potrditev uspešne rezervacije */
+
+.confirmation-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-md);
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+}
+
+.success-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--color-accent-soft);
+    color: var(--color-success);
+    font-size: 36px;
+    font-weight: var(--font-weight-bold);
+}
+
+.confirmation-header .page-title {
+    color: var(--color-primary);
+}
+
+/* Povzetek rezervacije */
+
+.confirmation-card {
+    padding: var(--spacing-lg);
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-md);
+    font-size: var(--font-size-sm);
+}
+
+.summary-row span:first-child {
+    color: var(--color-text-secondary);
+}
+
+.summary-row span:last-child {
+    text-align: right;
+}
+
+.total-row {
+    padding-top: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+    border-top: 1px solid var(--color-border);
+}
+
+#total-price {
+    color: var(--color-primary);
+    font-size: var(--font-size-xl);
+}
+
+/* QR-koda */
+
+.qr-card {
+    align-items: center;
+    padding: var(--spacing-xl);
+    text-align: center;
+}
+
+#qrcode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    background-color: #ffffff;
+    border-radius: var(--radius-md);
+}
+
+#qrcode img,
+#qrcode canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+#qr-token {
+    font-family: monospace;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    overflow-wrap: anywhere;
+}
+
+/* Prikrivanje elementov */
+
+[hidden] {
+    display: none !important;
+}
