@@ -122,7 +122,7 @@ function displayImage(offer) {
         image.alt = offer.title;
         image.hidden = false;
         placeholder.hidden = true;
-        image.src = offer.imageUrl;
+        image.src = new URL(offer.imageUrl, new URL("../../../", window.location.href)).href;
     }
 }
 
