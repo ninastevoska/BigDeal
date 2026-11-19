@@ -21,9 +21,6 @@
           <span class="bigdeal-logo-dot">.</span>
         </div>
         ${showTagline ? `
-          <p class="bigdeal-tagline">
-            Lokalne ugodnosti vsak dan
-          </p>
         ` : ""}
       `;
     });
