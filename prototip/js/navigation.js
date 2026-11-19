@@ -16,20 +16,63 @@
     store: '<path d="M3 10h18l-2-7H5z"/><path d="M5 10v11h14V10"/><path d="M9 21v-7h6v7"/>',
   };
 
-  const routes = {
-    buyer: [
-      { id: "home", label: "Domov", icon: "home", path: "buyer/home/" },
-      { id: "map", label: "Zemljevid", icon: "map", path: "buyer/map/" },
-      { id: "reservations", label: "Rezervacije", icon: "ticket", path: "buyer/reservation/" },
-      { id: "profile", label: "Profil", icon: "user", path: "buyer/profile/" },
-    ],
-    provider: [
-      { id: "dashboard", label: "Pregled", icon: "dashboard", path: "provider/dashboard/" },
-      { id: "offers", label: "Ponudbe", icon: "tag", path: "provider/offers/" },
-      { id: "pickups", label: "Prevzemi", icon: "qr", path: "provider/pickups/" },
-      { id: "business", label: "Podjetje", icon: "store", path: "provider/business/" },
-    ],
-  };
+
+const routes = {
+  buyer: [
+    {
+      id: "home",
+      label: "Domov",
+      icon: "home",
+      path: "buyer/home/index.html",
+    },
+    {
+      id: "map",
+      label: "Zemljevid",
+      icon: "map",
+      path: "buyer/map/index.html",
+    },
+    {
+      id: "reservations",
+      label: "Rezervacije",
+      icon: "ticket",
+      path: "buyer/reservation/index.html",
+    },
+    {
+      id: "profile",
+      label: "Profil",
+      icon: "user",
+      path: "buyer/profile/index.html",
+    },
+  ],
+
+  provider: [
+    {
+      id: "dashboard",
+      label: "Pregled",
+      icon: "dashboard",
+      path: "provider/dashboard/index.html",
+    },
+    {
+      id: "offers",
+      label: "Ponudbe",
+      icon: "tag",
+      path: "provider/offers/index.html",
+    },
+    {
+      id: "pickups",
+      label: "Prevzemi",
+      icon: "qr",
+      path: "provider/pickups/index.html",
+    },
+    {
+      id: "business",
+      label: "Podjetje",
+      icon: "store",
+      path: "provider/business/index.html",
+    },
+  ],
+};
+
 
   // Osnovno pot prototipa določimo glede na lokacijo skripte.
   const scriptUrl = new URL(document.currentScript.src);
