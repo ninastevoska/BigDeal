@@ -53,7 +53,7 @@ window.BigDealMockData = {
       discountedPrice: 4,
       discountPercentage: 50,
       quantity: 15,
-      imageUrl: null,
+      imageUrl: "assets/images/pecivo.jpg",
     },
     {
       id: 2,
@@ -67,7 +67,7 @@ window.BigDealMockData = {
       discountedPrice: null,
       discountPercentage: 20,
       quantity: null,
-      imageUrl: null,
+      imageUrl:"assets/images/lokalne-dobrote.jpeg",
     },
     {
       id: 3,
@@ -81,7 +81,7 @@ window.BigDealMockData = {
       discountedPrice: 49.99,
       discountPercentage: 38,
       quantity: 8,
-      imageUrl: null,
+      imageUrl: "assets/images/jesenska-jakna.jpeg",
     },
     {
       id: 4,
@@ -95,7 +95,7 @@ window.BigDealMockData = {
       discountedPrice: null,
       discountPercentage: 30,
       quantity: null,
-      imageUrl: null,
+      imageUrl: "assets/images/zimska-kolekcija.jpeg",
     },
     {
       id: 5,
@@ -109,7 +109,7 @@ window.BigDealMockData = {
       discountedPrice: 39.99,
       discountPercentage: 33,
       quantity: 12,
-      imageUrl: null,
+      imageUrl: "assets/images/slusalke.jpeg",
     },
     {
       id: 6,
@@ -123,7 +123,7 @@ window.BigDealMockData = {
       discountedPrice: 11.90,
       discountPercentage: 34,
       quantity: 20,
-      imageUrl: null,
+      imageUrl: "assets/images/krema.jpeg",
     },
     {
       id: 7,
@@ -137,7 +137,7 @@ window.BigDealMockData = {
       discountedPrice: null,
       discountPercentage: 25,
       quantity: null,
-      imageUrl: null,
+      imageUrl: "assets/images/izdelki-za-dom.jpeg",
     },
     {
       id: 8,
@@ -151,7 +151,7 @@ window.BigDealMockData = {
       discountedPrice: 29.90,
       discountPercentage: 34,
       quantity: 10,
-      imageUrl: null,
+      imageUrl: "assets/images/nahrbtnik.jpeg",
     },
     {
       id: 9,
@@ -165,7 +165,7 @@ window.BigDealMockData = {
       discountedPrice: 25,
       discountPercentage: 40,
       quantity: 7,
-      imageUrl: null,
+      imageUrl: "assets/images/knjige.jpeg",
     },
     {
       id: 10,
@@ -179,7 +179,7 @@ window.BigDealMockData = {
       discountedPrice: null,
       discountPercentage: 15,
       quantity: null,
-      imageUrl: null,
+      imageUrl: "assets/images/darila.jpeg",
     },
   ],
 };
