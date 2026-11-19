@@ -1,0 +1,10 @@
+[
+  { "id": 1, "name": "Hrana in pijača" },
+  { "id": 2, "name": "Moda in obutev" },
+  { "id": 3, "name": "Elektronika" },
+  { "id": 4, "name": "Kozmetika in nega" },
+  { "id": 5, "name": "Dom in gospodinjstvo" },
+  { "id": 6, "name": "Šport in prosti čas" },
+  { "id": 7, "name": "Knjige in pisarniški material" },
+  { "id": 8, "name": "Drugo" }
+]

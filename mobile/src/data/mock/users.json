@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "authProviderId": "demo-user-001",
+    "firstName": "Ana",
+    "lastName": "Novak",
+    "email": "ana.novak@example.com",
+    "createdAt": "2026-10-15T09:00:00Z"
+  },
+  {
+    "id": 2,
+    "authProviderId": "demo-user-002",
+    "firstName": "Marko",
+    "lastName": "Kovač",
+    "email": "marko.kovac@example.com",
+    "createdAt": "2026-10-18T11:30:00Z"
+  },
+  {
+    "id": 3,
+    "authProviderId": "demo-user-003",
+    "firstName": "Sara",
+    "lastName": "Horvat",
+    "email": "sara.horvat@example.com",
+    "createdAt": "2026-11-02T14:15:00Z"
+  },
+  {
+    "id": 4,
+    "authProviderId": "demo-user-004",
+    "firstName": "Luka",
+    "lastName": "Zupan",
+    "email": "luka.zupan@example.com",
+    "createdAt": "2026-11-05T08:20:00Z"
+  },
+  {
+    "id": 5,
+    "authProviderId": "demo-user-005",
+    "firstName": "Maja",
+    "lastName": "Petek",
+    "email": "maja.petek@example.com",
+    "createdAt": "2026-11-10T16:40:00Z"
+  }
+]

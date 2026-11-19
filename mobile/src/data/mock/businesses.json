@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "ownerId": 1,
+    "name": "Pekarna Zlato Zrno",
+    "description": "Lokalna pekarna s svežim kruhom, pecivom in ugodnimi paketi neprodanih izdelkov.",
+    "businessType": "Pekarna",
+    "address": "Maribor, Slovenija",
+    "latitude": 46.5547,
+    "longitude": 15.6459,
+    "phone": null,
+    "email": "pekarna@example.com"
+  },
+  {
+    "id": 2,
+    "ownerId": 2,
+    "name": "Moda Urban",
+    "description": "Trgovina z oblačili in obutvijo, ki redno pripravlja sezonske akcije.",
+    "businessType": "Trgovina z oblačili",
+    "address": "Maribor, Slovenija",
+    "latitude": 46.5586,
+    "longitude": 15.6467,
+    "phone": null,
+    "email": "moda@example.com"
+  },
+  {
+    "id": 3,
+    "ownerId": 3,
+    "name": "Kavarna Aroma",
+    "description": "Kavarna s kavo, sladicami in posebnimi ugodnimi paketi za prevzem.",
+    "businessType": "Kavarna",
+    "address": "Ljubljana, Slovenija",
+    "latitude": 46.0511,
+    "longitude": 14.5062,
+    "phone": null,
+    "email": "aroma@example.com"
+  },
+  {
+    "id": 4,
+    "ownerId": 4,
+    "name": "TechCorner",
+    "description": "Lokalna trgovina z elektroniko, računalniško opremo in dodatki.",
+    "businessType": "Trgovina z elektroniko",
+    "address": "Ljubljana, Slovenija",
+    "latitude": 46.0544,
+    "longitude": 14.5102,
+    "phone": null,
+    "email": "techcorner@example.com"
+  },
+  {
+    "id": 5,
+    "ownerId": 5,
+    "name": "Lepota Natura",
+    "description": "Trgovina z izdelki za nego obraza, telesa in las.",
+    "businessType": "Kozmetična trgovina",
+    "address": "Celje, Slovenija",
+    "latitude": 46.2309,
+    "longitude": 15.2604,
+    "phone": null,
+    "email": "natura@example.com"
+  },
+  {
+    "id": 6,
+    "ownerId": 2,
+    "name": "Aktiv Sport",
+    "description": "Trgovina s športnimi oblačili, opremo in dodatki za rekreacijo.",
+    "businessType": "Športna trgovina",
+    "address": "Maribor, Slovenija",
+    "latitude": 46.5620,
+    "longitude": 15.6501,
+    "phone": null,
+    "email": "aktivsport@example.com"
+  }
+]
