@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Prevzemi – BigDeal ponudnik</title>
+
+  <link rel="stylesheet" href="../../../css/variables.css">
+  <link rel="stylesheet" href="../../../css/global.css">
+  <link rel="stylesheet" href="../../../components/header.css">
+  <link rel="stylesheet" href="../../../components/bottom-nav.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="app-shell">
+    <div class="phone-frame">
+
+      <header class="app-header app-header--compact">
+        <div class="header-brand">
+          <h1 class="header-title">Prevzemi</h1>
+          <span class="header-location">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 10h18l-2-7H5z"/><path d="M5 10v11h14V10"/><path d="M9 21v-7h6v7"/>
+            </svg>
+            <span id="headerBusinessName"></span>
+          </span>
+        </div>
+
+        <div class="header-actions">
+          <button
+            type="button"
+            class="header-icon-button"
+            data-action="scan"
+            aria-label="Skeniraj QR-kodo"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zm7 0v4h-4m0 3h4"/>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <main class="page-content">
+
+        <!-- Glavno dejanje: skeniranje -->
+        <section class="section">
+          <button type="button" class="scan-cta" data-action="scan">
+            <span class="scan-cta-icon" id="scanCtaIcon"></span>
+            <span class="scan-cta-text">
+              <span class="scan-cta-title">Skeniraj QR-kodo kupca</span>
+              <span class="scan-cta-subtitle">Preveri rezervacijo in potrdi prevzem</span>
+            </span>
+            <span class="scan-cta-arrow" id="scanCtaArrow"></span>
+          </button>
+        </section>
+
+        <!-- Iskanje in filtri -->
+        <section class="section pickups-controls">
+          <label class="search-field">
+            <span class="visually-hidden">Išči rezervacije</span>
+            <span class="search-field-icon" id="searchIcon"></span>
+            <input
+              type="search"
+              class="form-input search-field-input"
+              id="searchInput"
+              placeholder="Išči po imenu, izdelku ali kodi"
+              autocomplete="off"
+            >
+          </label>
+
+          <div class="segmented" role="tablist" aria-label="Status rezervacij" id="statusTabs">
+            <button type="button" class="segmented-item" role="tab" data-filter="waiting">
+              Za prevzem <span class="segmented-count" data-count="waiting"></span>
+            </button>
+            <button type="button" class="segmented-item" role="tab" data-filter="done">
+              Prevzeto <span class="segmented-count" data-count="done"></span>
+            </button>
+            <button type="button" class="segmented-item" role="tab" data-filter="other">
+              Ostalo <span class="segmented-count" data-count="other"></span>
+            </button>
+          </div>
+        </section>
+
+        <!-- Seznam rezervacij -->
+        <section class="section" aria-live="polite">
+          <div id="reservationList" class="reservation-list"></div>
+        </section>
+
+      </main>
+
+      <nav data-bottom-nav data-mode="provider" data-active="pickups"></nav>
+
+      <!-- Spodnji list: skeniranje, preverjanje in podrobnosti -->
+      <div class="sheet" id="sheet" hidden>
+        <div class="sheet-backdrop" data-action="close"></div>
+        <div
+          class="sheet-panel"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="sheetTitle"
+          id="sheetPanel"
+        ></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../../js/mock-data.js"></script>
+  <script src="../../../js/navigation.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
