@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="sl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BigDeal – Domov</title>
+
+    <!-- Skupni oblikovni sistem -->
+    <link rel="stylesheet" href="../../../css/variables.css">
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../components/header.css">
+    <link rel="stylesheet" href="../../../components/bottom-nav.css">
+    <link rel="stylesheet" href="../../../components/offer-card.css">
+    <link rel="stylesheet" href="../../../components/logo.css">
+
+    <!-- Slogi domačega zaslona -->
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+
+<body>
+    <div class="app-shell">
+        <div class="phone-frame">
+
+
+            <!-- Glava domačega zaslona -->
+            <header class="app-header home-header">
+                <div class="home-header-left">
+                    <div data-bigdeal-brand></div>
+
+                    <button class="home-location" type="button" aria-label="Lokacija: Maribor">
+                        <span class="home-location-icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" />
+                                <circle cx="12" cy="10" r="2.5" />
+                            </svg>
+                        </span>
+
+                        <span class="home-location-text">
+                            <span class="home-location-label">Tvoja lokacija</span>
+                            <span class="home-location-city">
+                                Maribor
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="m6 9 6 6 6-6" />
+                                </svg>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+
+                <button class="header-icon-button home-notification" type="button" aria-label="Obvestila"
+                    title="Obvestila">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9" />
+                        <path d="M10 21h4" />
+                    </svg>
+                </button>
+            </header>
+
+
+            <!-- Vsebina zaslona -->
+            <main class="page-content home-page">
+
+                <!-- Iskanje -->
+                <section class="home-search" aria-label="Iskanje ponudb">
+
+                    <svg class="home-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="7" />
+                        <path d="m20 20-4-4" />
+                    </svg>
+
+
+                    <input id="offer-search" type="search" placeholder="Kaj iščeš danes?" aria-label="Poišči ponudbo">
+                </section>
+
+                <!-- Promocijski banner -->
+                <section class="home-hero">
+                    <p class="hero-eyebrow">LOKALNE UGODNOSTI</p>
+
+                    <h1>Več odkriješ.<br>Manj zapraviš.</h1>
+
+                    <p class="hero-description">
+                        Odkrij odlične ponudbe v svoji bližini.
+                    </p>
+
+                    <button id="explore-button" class="btn btn-accent hero-button" type="button">
+                        Razišči ponudbe
+                    </button>
+
+                    <div class="hero-decoration" aria-hidden="true"></div>
+                </section>
+
+                <!-- Kategorije -->
+                <section class="section" aria-labelledby="categories-title">
+                    <div class="section-heading">
+                        <h2 id="categories-title" class="home-section-title">
+                            Kategorije
+                        </h2>
+                    </div>
+
+                    <div id="category-list" class="home-categories">
+                        <!-- Kategorije doda script.js -->
+                    </div>
+                </section>
+
+                <!-- Ponudbe -->
+                <section id="offers-section" class="section" aria-labelledby="offers-title">
+                    <div class="section-heading">
+                        <h2 id="offers-title" class="home-section-title">
+                            Aktualne ponudbe
+                        </h2>
+
+                        <span id="offer-count" class="text-caption"></span>
+                    </div>
+
+                    <div id="offer-list" class="offer-grid">
+                        <!-- Kartice ponudb doda script.js -->
+                    </div>
+
+                    <p id="offers-message" class="offers-message" role="status">
+                        Nalaganje ponudb ...
+                    </p>
+                </section>
+
+            </main>
+
+            <!-- Skupna spodnja navigacija -->
+            <nav data-bottom-nav data-mode="buyer" data-active="home"></nav>
+
+        </div>
+    </div>
+
+    <!-- Skupna navigacija in logika zaslona -->
+    <script src="../../../js/mock-data.js"></script>
+    <script src="../../../js/navigation.js"></script>
+    <script src="./script.js"></script>
+
+    <!-- Brand Script -->
+    <script src="../../../js/brand.js"></script>
+</body>
+
+</html>
