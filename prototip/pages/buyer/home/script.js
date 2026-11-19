@@ -14,16 +14,42 @@
   let categories = [];
   let selectedCategory = null;
 
-  const categoryIcons = {
-    1: "🥐",
-    2: "👗",
-    3: "💻",
-    4: "🧴",
-    5: "🏠",
-    6: "⚽",
-    7: "📚",
-    8: "✨",
-  };
+
+const categoryIcons = {
+  1: '<path d="M4 3v7a3 3 0 0 0 6 0V3M7 3v18M15 3v18M15 3c4 0 5 3 5 7v2h-5"/>',
+  2: '<path d="m16 4 5 3-3 5-3-2v11H9V10l-3 2-3-5 5-3 2 2h4z"/>',
+  3: '<rect x="4" y="4" width="16" height="12" rx="2"/><path d="M2 20h20l-2-4H4z"/>',
+  4: '<path d="M12 21s-9-5.5-9-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-9 11-9 11z"/>',
+  5: '<path d="m3 10 9-7 9 7v10H3z"/><path d="M9 20v-7h6v7"/>',
+  6: '<circle cx="12" cy="12" r="9"/><path d="m12 7 4 3-1.5 5h-5L8 10zM12 3v4m9 5-5-2M3 12l5-2"/>',
+  7: '<path d="M12 7c-3-2-6-2-9-1v14c3-1 6-1 9 1 3-2 6-2 9-1V6c-3-1-6-1-9 1z"/><path d="M12 7v14"/>',
+  8: '<circle cx="9" cy="9" r="4"/><path d="M3 21a6 6 0 0 1 12 0M17 8h5m-2.5-2.5v5"/>',
+};
+
+const allCategoryIcon =
+  '<rect x="3" y="3" width="7" height="7" rx="1.5"/>' +
+  '<rect x="14" y="3" width="7" height="7" rx="1.5"/>' +
+  '<rect x="3" y="14" width="7" height="7" rx="1.5"/>' +
+  '<rect x="14" y="14" width="7" height="7" rx="1.5"/>';
+
+
+function getCategoryIcon(categoryId) {
+  return `
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.8"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      ${categoryIcons[categoryId] || allCategoryIcon}
+    </svg>
+  `;
+}
+
+
 
   function escapeHtml(value) {
     return String(value ?? "").replace(/[&<>"']/g, (char) => ({
@@ -50,10 +76,6 @@
     return businesses.find((business) => business.id === id);
   }
 
-  function getCategoryIcon(categoryId) {
-    return categoryIcons[categoryId] || "🛍️";
-  }
-
   /* Pretvorba relativne poti slike v lokalni URL */
 
   function getImageUrl(imageUrl) {
@@ -71,7 +93,7 @@
 
   function renderCategories() {
     const allCategories = [
-      { id: null, name: "Vse", icon: "✨" },
+      { id: null, name: "Vse", icon: getCategoryIcon(null) },
       ...categories.map((category) => ({
         id: category.id,
         name: category.name,

@@ -189,3 +189,134 @@
 .offers-message:empty {
   display: none;
 }
+
+
+
+/* Izboljšana glava kupčevega domačega zaslona */
+
+.home-header {
+  min-height: 112px;
+  padding-top: 20px;
+  padding-bottom: 14px;
+  align-items: flex-start;
+}
+
+.home-header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.home-header .header-logo {
+  font-size: 26px;
+  letter-spacing: -1.3px;
+}
+
+.home-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  color: var(--color-text);
+}
+
+.home-location-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: var(--color-surface-secondary);
+  color: var(--color-primary);
+}
+
+.home-location-icon svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.home-location-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.home-location-label {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.home-location-city {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.home-location-city svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.home-notification {
+  margin-top: 2px;
+  box-shadow: var(--shadow-card);
+}
+
+.home-search-icon {
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+  color: var(--color-text-secondary);
+}
+
+/* Moderne kategorije */
+
+.category-icon {
+  border-radius: 18px;
+  background: var(--color-surface);
+}
+
+.category-icon svg {
+  width: 25px;
+  height: 25px;
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.category-button:hover .category-icon {
+  background: var(--color-accent-soft);
+  border-color: var(--color-primary);
+}
+
+.category-button.active .category-icon {
+  background: var(--color-accent-soft);
+  border-color: var(--color-primary);
+}
+
+.category-button.active .category-label {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+
