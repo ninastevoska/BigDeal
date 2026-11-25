@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Podrobnosti ponudbe | BigDeal</title>
+
+    <link rel="stylesheet" href="../../../css/variables.css">
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../components/header.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-shell">
+        <div class="phone-frame">
+
+            <header class="app-header app-header--compact">
+
+                <a href="../home/index.html"
+                   class="header-icon-button header-back"
+                   aria-label="Nazaj na ponudbe">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M19 12H5"></path>
+                        <path d="M12 19l-7-7 7-7"></path>
+                    </svg>
+
+                </a>
+
+                <h1 class="header-title">Podrobnosti ponudbe</h1>
+
+            </header>
+
+            <main class="page-content">
+
+                <section id="error-message" class="section" hidden>
+                    <h2 class="section-title">Ponudba ni najdena</h2>
+                    <p class="text-secondary">
+                        Izbrana ponudba ne obstaja.
+                    </p>
+
+                    <a href="../home/index.html"
+                       class="btn btn-primary btn-full">
+                        Nazaj na ponudbe
+                    </a>
+                </section>
+
+                <div id="offer-content" hidden>
+
+                    <section class="section">
+
+                        <div class="offer-image-container">
+                            <img id="offer-image" alt="" hidden>
+
+                            <div id="image-placeholder">
+                                Slika ni na voljo
+                            </div>
+                        </div>
+
+                        <div class="offer-badges row">
+                            <span id="offer-discount"
+                                  class="badge badge-discount"></span>
+
+                            <span id="offer-status"
+                                  class="badge"></span>
+                        </div>
+
+                        <p id="offer-category"
+                           class="text-caption"></p>
+
+                        <h2 id="offer-title"
+                            class="page-title"></h2>
+
+                        <div class="price-row row">
+                            <span id="discounted-price"></span>
+                            <span id="original-price"></span>
+                        </div>
+
+                        <p id="offer-saving"></p>
+
+                    </section>
+
+                    <section class="section stack">
+
+                        <h2 class="section-title">Opis ponudbe</h2>
+
+                        <p id="offer-description"
+                           class="text-secondary"></p>
+
+                    </section>
+                    <section id="validity-section" class="section stack" hidden>
+
+                            <h2 class="section-title">Veljavnost ponudbe</h2>
+
+                            <div class="card validity-card">
+
+                                <p id="offer-valid-from"></p>
+
+                                <p id="offer-valid-to"></p>
+
+                            </div>
+
+                    </section>
+
+                    <section class="section stack">
+
+                        <h2 class="section-title">Ponudnik</h2>
+
+                        <div class="card business-card">
+
+                            <h3 id="business-name"
+                                class="card-title"></h3>
+
+                            <p id="business-type"
+                               class="text-caption"></p>
+
+                            <p id="business-address"
+                               class="text-secondary text-small"></p>
+
+                        </div>
+
+                    </section>
+
+                    <section class="section" id="availability-section">
+
+                        <h2 class="section-title">Razpoložljivost</h2>
+
+                        <p id="offer-quantity"></p>
+
+                    </section>
+
+                </div>
+
+            </main>
+
+            <footer id="offer-footer" class="offer-footer" hidden>
+
+                <button id="reserve-button"
+                        class="btn btn-primary btn-full"
+                        type="button">
+                    Rezerviraj
+                </button>
+
+                <p id="payment-info" class="text-caption">
+                    Plačilo ob osebnem prevzemu.
+                </p>
+
+                <p id="promotion-info" hidden>
+                    Popust lahko izkoristiš neposredno pri ponudniku.
+                    Rezervacija ni mogoča.
+                </p>
+
+                <p id="unavailable-info" hidden>
+                    Ponudbe trenutno ni mogoče rezervirati.
+                </p>
+
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="../../../js/mock-data.js"></script>
+    <script src="../../../js/reservation-storage.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

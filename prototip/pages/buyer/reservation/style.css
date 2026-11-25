@@ -1,0 +1,129 @@
+
+/* Povzetek izbrane ponudbe */
+
+.offer-summary {
+    padding: var(--spacing-lg);
+}
+
+#unit-price {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Izbira količine */
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xl);
+}
+
+.quantity-selector button {
+    width: 48px;
+    height: 48px;
+    font-size: var(--font-size-xl);
+}
+
+#quantity-value {
+    min-width: 40px;
+    text-align: center;
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-weight-bold);
+}
+
+#available-quantity {
+    text-align: center;
+}
+
+/* Termini prevzema */
+
+.pickup-slots {
+    border: none;
+    padding: 0;
+    min-width: 0;
+}
+
+.pickup-slots legend {
+    margin-bottom: var(--spacing-md);
+    padding: 0;
+}
+
+.pickup-option {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    font-size: var(--font-size-sm);
+    cursor: pointer;
+}
+
+.pickup-option input {
+    accent-color: var(--color-primary);
+    width: 18px;
+    height: 18px;
+}
+
+.pickup-option:has(input:checked) {
+    border-color: var(--color-primary);
+    background: var(--color-accent-soft);
+}
+
+/* Povzetek rezervacije */
+
+.reservation-summary {
+    padding: var(--spacing-lg);
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+}
+
+.summary-row span:last-child {
+    text-align: right;
+}
+
+#summary-original-price {
+    text-decoration: line-through;
+    color: var(--color-text-secondary);
+}
+
+#summary-saving {
+    color: var(--color-success);
+    font-weight: var(--font-weight-semibold);
+}
+
+.total-row {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--spacing-lg);
+}
+
+#summary-total {
+    color: var(--color-primary);
+    font-size: var(--font-size-xxl);
+}
+
+.payment-info {
+    text-align: center;
+}
+
+/* Sporočilo ob uspešnem preverjanju */
+
+#success-message {
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    background: var(--color-accent-soft);
+    color: var(--color-success);
+    text-align: center;
+    font-size: var(--font-size-sm);
+}
+
+/* Prikrivanje elementov */
+
+[hidden] {
+    display: none !important;
+}

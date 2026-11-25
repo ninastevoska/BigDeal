@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nova ponudba | BigDeal</title>
+
+    <link rel="stylesheet" href="../../../css/variables.css">
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../components/header.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app-shell">
+    <div class="phone-frame">
+
+        <header class="app-header app-header--compact">
+
+            <a href="../dashboard/index.html"
+               class="header-icon-button header-back"
+               aria-label="Nazaj">
+
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M19 12H5"></path>
+                    <path d="M12 19l-7-7 7-7"></path>
+                </svg>
+
+            </a>
+
+            <h1 class="header-title">Nova ponudba</h1>
+
+        </header>
+
+        <main class="page-content">
+
+            <form id="offer-form">
+
+                <!-- Vrsta ponudbe -->
+
+                <section class="section stack">
+
+                    <h2 class="section-title">Vrsta ponudbe</h2>
+
+                    <label class="type-option card">
+
+                        <input type="radio"
+                               name="offer-type"
+                               value="PROMOTION"
+                               checked>
+
+                        Promocijska ponudba
+
+                    </label>
+
+                    <label class="type-option card">
+
+                        <input type="radio"
+                               name="offer-type"
+                               value="RESERVABLE">
+
+                        Rezervacijska ponudba
+
+                    </label>
+
+                    <p id="type-description"
+                       class="text-caption"></p>
+
+                </section>
+
+                <!-- Osnovni podatki -->
+
+                <section class="section stack">
+
+                    <h2 class="section-title">Podatki o ponudbi</h2>
+
+                    <div class="form-group">
+
+                        <label for="business"
+                               class="form-label">Ponudnik</label>
+
+                        <select id="business"
+                                class="form-select"
+                                required>
+                            <option value="">Izberi ponudnika</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="title"
+                               class="form-label">Naziv ponudbe</label>
+
+                        <input id="title"
+                               class="form-input"
+                               type="text"
+                               maxlength="100"
+                               required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="category"
+                               class="form-label">Kategorija</label>
+
+                        <select id="category"
+                                class="form-select"
+                                required>
+                            <option value="">Izberi kategorijo</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="description"
+                               class="form-label">Opis ponudbe</label>
+
+                        <textarea id="description"
+                                  class="form-textarea"
+                                  maxlength="1000"
+                                  required></textarea>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="image-url"
+                               class="form-label">URL fotografije</label>
+
+                        <input id="image-url"
+                               class="form-input"
+                               type="url"
+                               placeholder="https://...">
+
+                        <p class="text-caption">Neobvezno polje.</p>
+
+                    </div>
+
+                </section>
+
+                <!-- Cena in popust -->
+
+                <section class="section stack">
+
+                    <h2 class="section-title">Cena in popust</h2>
+
+                    <div class="form-group">
+
+                        <label for="original-price"
+                               class="form-label">Redna cena (€)</label>
+
+                        <input id="original-price"
+                               class="form-input"
+                               type="number"
+                               min="0.01"
+                               step="0.01">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="discounted-price"
+                               class="form-label">Znižana cena (€)</label>
+
+                        <input id="discounted-price"
+                               class="form-input"
+                               type="number"
+                               min="0"
+                               step="0.01">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="discount"
+                               class="form-label">Popust (%)</label>
+
+                        <input id="discount"
+                               class="form-input"
+                               type="number"
+                               min="1"
+                               max="100"
+                               step="1"
+                               required>
+
+                        <p id="discount-info"
+                           class="text-caption"></p>
+
+                    </div>
+
+                    <div id="quantity-section"
+                         class="form-group"
+                         hidden>
+
+                        <label for="quantity"
+                               class="form-label">Količina</label>
+
+                        <input id="quantity"
+                               class="form-input"
+                               type="number"
+                               min="1"
+                               step="1"
+                               disabled>
+
+                    </div>
+
+                </section>
+
+                <!-- Veljavnost ponudbe -->
+
+                <section class="section stack">
+
+                    <h2 class="section-title">Veljavnost ponudbe</h2>
+
+                    <div class="form-group">
+
+                        <label for="start-date"
+                               class="form-label">Datum začetka</label>
+
+                        <input id="start-date"
+                               class="form-input"
+                               type="date"
+                               required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="end-date"
+                               class="form-label">Datum konca</label>
+
+                        <input id="end-date"
+                               class="form-input"
+                               type="date"
+                               required>
+
+                    </div>
+
+                </section>
+
+                <!-- Termini prevzema -->
+
+                <section id="pickup-section"
+                         class="section stack"
+                         hidden>
+
+                    <h2 class="section-title">Termini prevzema</h2>
+
+                    <div id="pickup-slots" class="stack"></div>
+
+                    <button id="add-slot"
+                            class="btn btn-secondary btn-full"
+                            type="button">
+
+                        + Dodaj termin prevzema
+
+                    </button>
+
+                </section>
+
+                <p id="form-error"
+                   class="form-error"
+                   role="alert"
+                   hidden></p>
+
+                <button class="btn btn-primary btn-full"
+                        type="submit">
+
+                    Predogled ponudbe
+
+                </button>
+
+            </form>
+
+            <!-- Predogled -->
+
+            <section id="preview"
+                     class="section stack"
+                     hidden>
+
+                <h2 class="section-title">Predogled ponudbe</h2>
+
+                <div class="card preview-card stack">
+
+                    <img id="preview-image" alt="" hidden>
+
+                    <h3 id="preview-title" class="card-title"></h3>
+
+                    <p id="preview-description"></p>
+
+                    <p id="preview-details"
+                       class="text-secondary text-small"></p>
+
+                </div>
+
+                <button id="publish-button"
+                        class="btn btn-primary btn-full"
+                        type="button">
+
+                    Objavi ponudbo
+
+                </button>
+
+            </section>
+
+            <p id="success-message"
+               role="status"
+               hidden></p>
+
+        </main>
+
+    </div>
+</div>
+
+<script src="../../../js/mock-data.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
